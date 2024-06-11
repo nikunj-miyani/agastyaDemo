@@ -1,21 +1,16 @@
-import React from "react";
-import { View, Button, Text, StyleSheet } from "react-native";
+import React from 'react';
+import {LogBox} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import {MainStackNavigator} from './src/navigation/StackNavigator';
+
+LogBox.ignoreAllLogs();
+LogBox.ignoreLogs(['Warning: ...']);
 
 const App = () => {
   return (
-    <View style={styles.center}>
-      <Text>This is the App screen</Text>
-    </View>
+    <NavigationContainer>
+      <MainStackNavigator />
+    </NavigationContainer>
   );
 };
-
-const styles = StyleSheet.create({
-  center: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    textAlign: "center",
-  },
-});
-
 export default App;
