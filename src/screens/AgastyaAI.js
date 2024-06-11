@@ -161,6 +161,7 @@ const AgastyaAI = () => {
             value={agastyaText}
             placeholder="Ask me or choose an option"
             style={styles.agastyaInput}
+            onChangeText={setAgastyaText}
           />
           {isError && (
             <Text style={styles.errorTxt}>Sorry, Please select any option</Text>
